@@ -1,11 +1,11 @@
 #!/usr/bin/php
 <?php
 
-$fs = new PDO('mysql:host=localhost;dbname=flyspray', 'flyspray', '');
+$fs = new PDO('mysql:host=localhost;dbname=flyspray', 'username', 'password');
 $fs->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $fs->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
-$tb = new PDO('mysql:host=localhost;dbname=thebuggenie', 'thebuggenie', '');
+$tb = new PDO('mysql:host=localhost;dbname=thebuggenie', 'username', 'password');
 $tb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $tb->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
