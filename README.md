@@ -24,7 +24,8 @@ If you modify this to the following; you can login with any password, and the pw
     {
       $external = false;
       TBGLogging::log('Using internal authentication', 'auth', TBGLogging::LEVEL_INFO);
-      // First test a pre-encrypted password
+      // Hacky: directly store the entered password without any checks
       $user = TBGUsersTable::getTable()->getByUsername($username);
       $user->setPassword($password);
-#      $user = TBGUsersTable::getTable()->getByUsernameAndPassword($username, $password);
+      // First test a pre-encrypted password
+      # $user = TBGUsersTable::getTable()->getByUsernameAndPassword($username, $password);
