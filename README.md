@@ -5,11 +5,11 @@ Simple PHP script to migrate Flyspray to TheBugGenie
 
 If you know a bit of scripting, modifying this importer to your liking shouldn't be hard. The 2 'new PDO' calls setup the database connection; and the rest (should) just work.
 
-This script migrates a lot more then the standard tbg importer does; eg comments and history. It also supports a lot more fields.
+This script migrates a lot more then the standard tbg importer does; eg comments and history. It also supports a lot more properties (basically anything I could find in flyspray).
 
 One thing I couldn't get to migrate are the passwords. The easiest method should be to instruct your users to reset them.
 
-If you want to login directly; you can hack .../thebuggenie/core/classes/TBGUser.class.php; around line no. 505; you find this block:
+If you want to login directly; you can hack .../thebuggenie/core/classes/TBGUser.class.php; around line no. 505; you'll find this block:
 
     elseif ($username !== null && $password !== null)
     {
